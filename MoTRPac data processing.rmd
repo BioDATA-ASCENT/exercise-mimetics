@@ -1,0 +1,130 @@
+---
+title: "moTRPac"
+output: html_document
+date: "2026-11-04"
+---
+```{r}
+library(dplyr)
+```
+
+
+```{r}
+rna<-read.csv('./Data/Muscle_transciptome.csv')
+
+rna_met<-read.csv("./Data/human-precovid-sed-adu_t06-muscle_transcript-rna-seq_metadata_features_v2.0.csv")
+```
+  
+```{r}
+head(rna)
+
+rna_24 <- rna |>
+  filter(contrast == "group_timepointADUEndur.post_24_hr - group_timepointADUEndur.pre_exercise - group_timepointADUControl.post_24_hr + group_timepointADUControl.pre_exercise")   
+
+rna_24_ranked <- rna_24 |>
+  arrange(desc(logFC))
+
+rna_24_ranked_gene <- left_join(
+  rna_24_ranked,
+  rna_met |> select(feature_id, gene_symbol),
+  by = "feature_id"
+)
+
+rna_24_ranked_gene <- rna_24_ranked_gene |>
+  filter(!is.na(gene_symbol))
+  
+
+write.csv(rna_24_ranked_gene, "ranked_24_control.csv", row.names = FALSE)
+```
+
+
+
+```{r}
+library(ggplot2)
+library(dplyr)
+library(ggrepel)
+
+volcano_data <- rna_24_ranked_gene |>
+  mutate(
+    significance = case_when(
+      adj_p_value < 0.05 & logFC > 0.5 ~ "Upregulated",
+      adj_p_value < 0.05 & logFC < -0.5 ~ "Downregulated",
+      TRUE ~ "Not significant"
+    ),
+    neg_log10_padj = -log10(adj_p_value)
+  )
+
+# Select genes to label
+label_genes <- volcano_data |>
+  filter(
+    adj_p_value < 0.00017,
+    abs(logFC) > 0.5,
+    !is.na(gene_symbol)
+  )
+
+# Volcano plot
+ggplot(volcano_data,
+       aes(x = logFC, y = neg_log10_padj,
+           color = significance)) +
+
+  geom_point(alpha = 0.6, size = 1.5) +
+
+  geom_text_repel(
+    data = label_genes,
+    aes(label = gene_symbol),
+    size = 3.5,
+    max.overlaps = Inf,
+    box.padding = 0.6,
+    point.padding = 0.4
+  ) +
+
+  scale_color_manual(values = c(
+    "Upregulated" = "red",
+    "Downregulated" = "blue",
+    "Not significant" = "grey75"
+  )) +
+
+  geom_vline(xintercept = c(-1, 1), linetype = "dashed") +
+  geom_hline(yintercept = -log10(0.05), linetype = "dashed") +
+
+  theme_classic() +
+
+  labs(
+    title = "24h Post-Endurance Exercise Upregulated vs Down rgulated ",
+    x = "Log2 Fold Change",
+    y = "-Log10 Adjusted P-value",
+    color = "Expression"
+  )
+```
+
+
+```{r}
+library(dplyr)
+
+# Top upregulated genes
+up_genes <- volcano_data |>
+  filter(adj_p_value < 0.05, logFC > 0.5) |>
+  arrange(desc(logFC))
+
+# Top downregulated genes
+down_genes <- volcano_data |>
+  filter(adj_p_value < 0.05, logFC < -0.5) |>
+  arrange(logFC)
+
+# Combine into one dataframe
+top_16_genes <- bind_rows(up_genes, down_genes) |>
+  select(gene_symbol, logFC, p_value, adj_p_value, significance)
+
+# View dataframe
+View(top_16_genes)
+
+# Export
+write.csv(top_16_genes, "top_exercise_genes.csv",
+          row.names = FALSE)
+```
+  
+  
+##
+  
+
+  
+
