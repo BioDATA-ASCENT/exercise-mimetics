@@ -136,6 +136,7 @@ python test_lincs.py --up ... --down ... --cell-lines SKL ASC
 - Mani (PI), NIH R03OD032626 (2021–2022): exercise mimetics from LINCS P100 phosphoproteomic signatures.
 - Evangelista et al., *SigCom LINCS*, Nucleic Acids Research 2022.
 - Rizvi et al., *Scaling Large Language Models for Next-Generation Single-Cell Analysis* (C2S-Scale), bioRxiv 2025.
+- MoTrPAC Study Group et al. (2024). Molecular Transducers of Physical Activity Consortium (MoTrPAC): human studies design and protocol. *Journal of applied physiology (Bethesda, Md. : 1985)*, 137(3), 473–493. https://doi.org/10.1152/japplphysiol.00102.2024
 
 ## Team
 
