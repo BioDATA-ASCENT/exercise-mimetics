@@ -1,0 +1,7 @@
+contrast,original_contrast,input_features,features_without_symbol,duplicate_mapped_features,motrpac_genes,shared_genes,top_up,top_down
+endurance_vs_ctrl_4h,group_timepointADUEndur.post_3.5_4_hr - group_timepointADUEndur.pre_exercise - group_timepointADUControl.post_3.5_4_hr + group_timepointADUControl.pre_exercise,16509,1407,35,15067,12718,150,150
+resistance_vs_ctrl_4h,group_timepointADUResist.post_3.5_4_hr - group_timepointADUResist.pre_exercise - group_timepointADUControl.post_3.5_4_hr + group_timepointADUControl.pre_exercise,16509,1407,35,15067,12718,150,150
+endurance_vs_ctrl_24h,group_timepointADUEndur.post_24_hr - group_timepointADUEndur.pre_exercise - group_timepointADUControl.post_24_hr + group_timepointADUControl.pre_exercise,16509,1407,35,15067,12718,150,150
+resistance_vs_ctrl_24h,group_timepointADUResist.post_24_hr - group_timepointADUResist.pre_exercise - group_timepointADUControl.post_24_hr + group_timepointADUControl.pre_exercise,16509,1407,35,15067,12718,150,150
+endurance_vs_ctrl_early,group_timepointADUEndur.post_15_30_45_min - group_timepointADUEndur.pre_exercise - group_timepointADUControl.post_15_30_45_min + group_timepointADUControl.pre_exercise,16509,1407,35,15067,12718,150,150
+resistance_vs_ctrl_early,group_timepointADUResist.post_15_30_45_min - group_timepointADUResist.pre_exercise - group_timepointADUControl.post_15_30_45_min + group_timepointADUControl.pre_exercise,16509,1407,35,15067,12718,150,150

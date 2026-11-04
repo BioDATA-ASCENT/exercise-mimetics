@@ -1,0 +1,7 @@
+kind,signature,signature_genes,matched_genes,matched_fraction
+exercise,endurance_vs_ctrl_24h_top_16_exercise_genes,16,12,0.75
+drug,gse107998_rosuvastatin_5uM,68,51,0.75
+drug,gse107998_simvastatin_5uM,1805,1395,0.7728531855955678
+drug,gse229658_metformin_388uM_48h,657,657,1.0
+drug,gse229658_metformin_776uM_48h,3499,3499,1.0
+drug,gse40789_cardarine_gw501516_10nM_96h,6,6,1.0

@@ -1,0 +1,43 @@
+{
+  "n_nuclei": 30877,
+  "n_atlas_genes": 17693,
+  "n_original_atlas_features": 17695,
+  "myonuclei": 21718,
+  "myonucleus_labels": [
+    "Myocyte (NMJ-rich)",
+    "Myocyte (fast-twitch)",
+    "Myocyte (fast-twitch, cytoplasmic)",
+    "Myocyte (sk. muscle)",
+    "Myocyte (slow-twitch, cytoplasmic)"
+  ],
+  "n_other_celltypes": 17,
+  "normalization": "counts layer: normalize_total(1e4), log1p",
+  "gene_symbols": "GTEx approved symbol when available; original symbol otherwise. Unambiguous previous-symbol mappings only; no alias expansion.",
+  "eps_method": "GEO-deposited RMA log2 expression; mean transcript-cluster expression per unambiguously mapped gene; ordinary paired t (stimulated minus matched control), 12 donors, df=11. Not a reconstruction of any previously used moderated t signature.",
+  "eps_unambiguous_transcript_clusters": 20052,
+  "eps_finite_genes": 19018,
+  "eps_sources": [
+    "data/GSE44051_invitro_stimulation/GSE44051_series_matrix.txt.gz",
+    "data/GSE44051_invitro_stimulation/GPL6244.annot.gz"
+  ],
+  "seed": 44051,
+  "n_random_sets": 1000,
+  "thresholds": {
+    "primary": [
+      0.5,
+      0.25
+    ],
+    "sensitivity": [
+      0.6,
+      0.2
+    ]
+  },
+  "top_n_per_direction": 150,
+  "package_versions": {
+    "scanpy": "1.11.5",
+    "gseapy": "1.3.2",
+    "pandas": "2.3.3",
+    "scipy": "1.17.1",
+    "numpy": "2.4.6"
+  }
+}

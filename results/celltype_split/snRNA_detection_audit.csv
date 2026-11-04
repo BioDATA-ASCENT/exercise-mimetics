@@ -1,0 +1,7 @@
+contrast,top_n,top_not_in_atlas,top_not_detected,shared_not_detected
+endurance_vs_ctrl_4h,300,8,9,613
+resistance_vs_ctrl_4h,300,11,11,613
+endurance_vs_ctrl_24h,300,14,15,613
+resistance_vs_ctrl_24h,300,7,8,613
+endurance_vs_ctrl_early,300,23,25,613
+resistance_vs_ctrl_early,300,20,20,613

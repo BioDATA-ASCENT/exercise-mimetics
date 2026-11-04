@@ -1,0 +1,67 @@
+cell_id,cell_type,reference_row
+CST03_GATTCAGCAAACGTGG-skeletalmuscle,Adipocyte,18836
+CST03_CAACCAACAGACGTAG-skeletalmuscle,Adipocyte,19216
+TST03_TCTATTGAGTTCGCGC-skeletalmuscle,Adipocyte,28700
+CST03_GGTGAAGAGGATGGTC-skeletalmuscle,Endothelial cell (lymphatic),20858
+CST03_AAGCCGCCAGTCGTGC-skeletalmuscle,Endothelial cell (lymphatic),20916
+CST03_TTTATGCTCCTAGGGC-skeletalmuscle,Endothelial cell (lymphatic),18842
+TST01_GATCGATCAGCTGTAT-skeletalmuscle,Endothelial cell (vascular) I,10781
+CST03_TCAATCTTCTGCGTAA-skeletalmuscle,Endothelial cell (vascular) I,20684
+CST02_TGAGCATTCAGCTGGC-skeletalmuscle,Endothelial cell (vascular) I,10997
+NST01_AGCTCCTAGCTGCAAG-skeletalmuscle,Endothelial cell (vascular) II,5962
+TST01_CACATTTCAGCATGAG-skeletalmuscle,Endothelial cell (vascular) II,10516
+TST03_AGACGTTCATTAACCG-skeletalmuscle,Endothelial cell (vascular) II,30672
+CST02_TTAGTTCTCGTCTGCT-skeletalmuscle,Endothelial cell (vascular) III,11491
+CST02_TGAGAGGTCTCGATGA-skeletalmuscle,Endothelial cell (vascular) III,12198
+CST03_GTCATTTAGTAGGTGC-skeletalmuscle,Endothelial cell (vascular) III,18491
+CST02_AAGGAGCGTCAAAGCG-skeletalmuscle,Fibroblast,11850
+CST02_ACTGAGTCAATTGCTG-skeletalmuscle,Fibroblast,11013
+CST02_TGAGAGGGTCAACATC-skeletalmuscle,Fibroblast,11638
+EZ03_ACTGAACCAAGTTAAG-skeletalmuscle,Immune (DC),21005
+NST01_ACTGTCCAGACACGAC-skeletalmuscle,Immune (DC),5949
+NST01_ATCTGCCCATGCAACT-skeletalmuscle,Immune (DC),5223
+TST01_CTCTACGTCGACCAGC-skeletalmuscle,Immune (DC/macrophage),8277
+TST01_CCACGGAGTCCGTCAG-skeletalmuscle,Immune (DC/macrophage),10407
+CST03_GGACAAGGTCAGTGGA-skeletalmuscle,Immune (DC/macrophage),20816
+CST03_TAGTTGGAGAAACCAT-skeletalmuscle,Immune (NK cell),20828
+TST03_CCTCAGTAGTACGCCC-skeletalmuscle,Immune (NK cell),29599
+TST03_TGCCCTAGTCTCGTTC-skeletalmuscle,Immune (NK cell),30240
+TST03_CTCCTAGGTACGCACC-skeletalmuscle,Immune (T cell),30183
+CST02_CTCGAGGTCCGCGTTT-skeletalmuscle,Immune (T cell),12725
+TST03_CTCTGGTCAGTTAACC-skeletalmuscle,Immune (T cell),30734
+CST02_CACACCTAGCCAGTTT-skeletalmuscle,Immune (macrophage),11701
+CST03_CCGTTCATCCTTTCGG-skeletalmuscle,Immune (macrophage),19487
+TST03_AGATTGCAGATGTGGC-skeletalmuscle,Immune (macrophage),30727
+NST01_TATGCCCTCATCTGCC-skeletalmuscle,Immune (mast cell),7276
+CST02_CTCTACGAGTGGGATC-skeletalmuscle,Immune (mast cell),10971
+CST02_ACGCCAGCAGAAGCAC-skeletalmuscle,Immune (mast cell),12787
+CST03_CGTTCTGCATGCAATC-skeletalmuscle,Immune (neutrophil),19351
+CST01_CTGGTCTTCTTCATGT-skeletalmuscle,Immune (neutrophil),1157
+CST01_ATCATGGTCATGCTCC-skeletalmuscle,Immune (neutrophil),1549
+EZ01_TCTGGAAAGTTGCAGG-skeletalmuscle,Myocyte (NMJ-rich),2414
+TST03_CGTTAGATCCTCTAGC-skeletalmuscle,Myocyte (NMJ-rich),28917
+TST03_CTAGCCTCATCACAAC-skeletalmuscle,Myocyte (NMJ-rich),27670
+NST01_TACGGATAGCGCTCCA-skeletalmuscle,Myocyte (fast-twitch),5651
+TST01_GCAATCAGTTCATGGT-skeletalmuscle,Myocyte (fast-twitch),8583
+TST01_CCCATACAGGCTAGAC-skeletalmuscle,Myocyte (fast-twitch),9820
+CST03_TGCTGCTAGTGTACGG-skeletalmuscle,"Myocyte (fast-twitch, cytoplasmic)",20309
+EZ01_GAGTCCGAGCAACGGT-skeletalmuscle,"Myocyte (fast-twitch, cytoplasmic)",3736
+NST03_CATATTCAGTCGTACT-skeletalmuscle,"Myocyte (fast-twitch, cytoplasmic)",24671
+NST01_CGATCGGCAGGACGTA-skeletalmuscle,Myocyte (sk. muscle),5876
+EZ01_CAGATCAGTTTGACAC-skeletalmuscle,Myocyte (sk. muscle),3440
+TST03_CTCGAAATCAAGAAGT-skeletalmuscle,Myocyte (sk. muscle),30257
+NST03_GATCAGTCATGTAAGA-skeletalmuscle,"Myocyte (slow-twitch, cytoplasmic)",26001
+TST03_GTCTCGTTCCAAGTAC-skeletalmuscle,"Myocyte (slow-twitch, cytoplasmic)",27788
+EZ01_CTGTGCTAGTAGGCCA-skeletalmuscle,"Myocyte (slow-twitch, cytoplasmic)",3936
+CST03_AGCTCTCGTAGTGAAT-skeletalmuscle,Pericyte/SMC I,20690
+TST02_TGGCCAGTCTGTGCAA-skeletalmuscle,Pericyte/SMC I,18334
+NST03_CCTATTAAGTACGATA-skeletalmuscle,Pericyte/SMC I,24862
+EZ02_TAGACCATCTTGTCAT-skeletalmuscle,Pericyte/SMC II,13751
+TST03_CAGCTGGAGCAATATG-skeletalmuscle,Pericyte/SMC II,30797
+CST01_CCTATTATCCGGCACA-skeletalmuscle,Pericyte/SMC II,2237
+TST01_GACTGCGAGTCAAGCG-skeletalmuscle,Satellite cell,10361
+NST01_ATCCACCCAGATTGCT-skeletalmuscle,Satellite cell,5786
+EZ03_ATCATCTCACTTACGA-skeletalmuscle,Satellite cell,24023
+CST03_GCTCCTAAGGACGAAA-skeletalmuscle,Schwann cell,19268
+TST03_TTAGTTCTCTCCCTGA-skeletalmuscle,Schwann cell,29535
+CST03_CCTTACGAGAGCTGCA-skeletalmuscle,Schwann cell,20863

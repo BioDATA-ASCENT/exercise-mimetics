@@ -1,0 +1,111 @@
+exercise,drug,cell_type,embedding_cosine,expression_weighted_correlation,n_cells,n_embedding_valid,n_baseline_valid,mean_shared_genes,embedding_direction,baseline_direction
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse107998_rosuvastatin_5uM,Adipocyte,0.23414088040590286,,3,2,0,0.0,aligned,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse107998_rosuvastatin_5uM,Endothelial cell (lymphatic),,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse107998_rosuvastatin_5uM,Endothelial cell (vascular) I,,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse107998_rosuvastatin_5uM,Endothelial cell (vascular) II,,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse107998_rosuvastatin_5uM,Endothelial cell (vascular) III,,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse107998_rosuvastatin_5uM,Fibroblast,0.05620218813419342,,3,1,0,0.0,aligned,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse107998_rosuvastatin_5uM,Immune (DC),,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse107998_rosuvastatin_5uM,Immune (DC/macrophage),,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse107998_rosuvastatin_5uM,Immune (NK cell),0.0390397347509861,,3,1,0,0.0,aligned,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse107998_rosuvastatin_5uM,Immune (T cell),,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse107998_rosuvastatin_5uM,Immune (macrophage),,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse107998_rosuvastatin_5uM,Immune (mast cell),-0.06941237300634384,,3,1,0,0.0,opposed,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse107998_rosuvastatin_5uM,Immune (neutrophil),,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse107998_rosuvastatin_5uM,Myocyte (NMJ-rich),,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse107998_rosuvastatin_5uM,Myocyte (fast-twitch),0.3616817034780979,,3,2,0,0.0,aligned,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse107998_rosuvastatin_5uM,"Myocyte (fast-twitch, cytoplasmic)",,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse107998_rosuvastatin_5uM,Myocyte (sk. muscle),,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse107998_rosuvastatin_5uM,"Myocyte (slow-twitch, cytoplasmic)",0.24520863592624664,,3,1,0,0.0,aligned,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse107998_rosuvastatin_5uM,Pericyte/SMC I,,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse107998_rosuvastatin_5uM,Pericyte/SMC II,,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse107998_rosuvastatin_5uM,Satellite cell,,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse107998_rosuvastatin_5uM,Schwann cell,0.3464742600917816,,3,1,0,0.0,aligned,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse107998_simvastatin_5uM,Adipocyte,0.008097216486930847,,3,2,0,0.0,aligned,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse107998_simvastatin_5uM,Endothelial cell (lymphatic),,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse107998_simvastatin_5uM,Endothelial cell (vascular) I,,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse107998_simvastatin_5uM,Endothelial cell (vascular) II,,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse107998_simvastatin_5uM,Endothelial cell (vascular) III,,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse107998_simvastatin_5uM,Fibroblast,0.11264561861753464,,3,1,0,0.0,aligned,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse107998_simvastatin_5uM,Immune (DC),,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse107998_simvastatin_5uM,Immune (DC/macrophage),,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse107998_simvastatin_5uM,Immune (NK cell),0.12325911223888397,,3,1,0,0.0,aligned,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse107998_simvastatin_5uM,Immune (T cell),,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse107998_simvastatin_5uM,Immune (macrophage),-0.031829144805669785,,3,1,0,0.0,opposed,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse107998_simvastatin_5uM,Immune (mast cell),-0.037905313074588776,,3,1,0,0.0,opposed,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse107998_simvastatin_5uM,Immune (neutrophil),,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse107998_simvastatin_5uM,Myocyte (NMJ-rich),,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse107998_simvastatin_5uM,Myocyte (fast-twitch),0.0018857493996620178,,3,2,0,0.0,aligned,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse107998_simvastatin_5uM,"Myocyte (fast-twitch, cytoplasmic)",,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse107998_simvastatin_5uM,Myocyte (sk. muscle),,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse107998_simvastatin_5uM,"Myocyte (slow-twitch, cytoplasmic)",-0.022277548909187317,,3,1,0,0.0,opposed,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse107998_simvastatin_5uM,Pericyte/SMC I,,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse107998_simvastatin_5uM,Pericyte/SMC II,,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse107998_simvastatin_5uM,Satellite cell,,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse107998_simvastatin_5uM,Schwann cell,0.05318863317370415,,3,1,0,0.0,aligned,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse229658_metformin_388uM_48h,Adipocyte,-0.008636773563921452,,3,2,0,0.0,opposed,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse229658_metformin_388uM_48h,Endothelial cell (lymphatic),,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse229658_metformin_388uM_48h,Endothelial cell (vascular) I,,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse229658_metformin_388uM_48h,Endothelial cell (vascular) II,,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse229658_metformin_388uM_48h,Endothelial cell (vascular) III,,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse229658_metformin_388uM_48h,Fibroblast,0.2355840802192688,,3,1,0,0.0,aligned,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse229658_metformin_388uM_48h,Immune (DC),,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse229658_metformin_388uM_48h,Immune (DC/macrophage),,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse229658_metformin_388uM_48h,Immune (NK cell),0.2292586714029312,,3,1,0,0.0,aligned,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse229658_metformin_388uM_48h,Immune (T cell),,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse229658_metformin_388uM_48h,Immune (macrophage),-0.18435843288898468,,3,1,0,0.0,opposed,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse229658_metformin_388uM_48h,Immune (mast cell),-0.13918288052082062,,3,1,0,0.0,opposed,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse229658_metformin_388uM_48h,Immune (neutrophil),,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse229658_metformin_388uM_48h,Myocyte (NMJ-rich),,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse229658_metformin_388uM_48h,Myocyte (fast-twitch),0.051405780017375946,,3,2,0,0.0,aligned,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse229658_metformin_388uM_48h,"Myocyte (fast-twitch, cytoplasmic)",,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse229658_metformin_388uM_48h,Myocyte (sk. muscle),,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse229658_metformin_388uM_48h,"Myocyte (slow-twitch, cytoplasmic)",-0.01841515116393566,,3,1,0,0.0,opposed,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse229658_metformin_388uM_48h,Pericyte/SMC I,,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse229658_metformin_388uM_48h,Pericyte/SMC II,,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse229658_metformin_388uM_48h,Satellite cell,,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse229658_metformin_388uM_48h,Schwann cell,0.15815047919750214,,3,1,0,0.0,aligned,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse229658_metformin_776uM_48h,Adipocyte,0.05194834992289543,,3,2,0,0.3333333333333333,aligned,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse229658_metformin_776uM_48h,Endothelial cell (lymphatic),,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse229658_metformin_776uM_48h,Endothelial cell (vascular) I,,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse229658_metformin_776uM_48h,Endothelial cell (vascular) II,,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse229658_metformin_776uM_48h,Endothelial cell (vascular) III,,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse229658_metformin_776uM_48h,Fibroblast,0.23935700953006744,,3,1,0,0.0,aligned,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse229658_metformin_776uM_48h,Immune (DC),,,3,0,0,0.3333333333333333,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse229658_metformin_776uM_48h,Immune (DC/macrophage),,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse229658_metformin_776uM_48h,Immune (NK cell),0.1855342537164688,,3,1,0,0.0,aligned,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse229658_metformin_776uM_48h,Immune (T cell),,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse229658_metformin_776uM_48h,Immune (macrophage),-0.4586672782897949,,3,1,0,0.0,opposed,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse229658_metformin_776uM_48h,Immune (mast cell),-0.09147965162992477,,3,1,0,0.0,opposed,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse229658_metformin_776uM_48h,Immune (neutrophil),,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse229658_metformin_776uM_48h,Myocyte (NMJ-rich),,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse229658_metformin_776uM_48h,Myocyte (fast-twitch),-0.09505622833967209,,3,2,0,0.3333333333333333,opposed,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse229658_metformin_776uM_48h,"Myocyte (fast-twitch, cytoplasmic)",,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse229658_metformin_776uM_48h,Myocyte (sk. muscle),,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse229658_metformin_776uM_48h,"Myocyte (slow-twitch, cytoplasmic)",0.038259733468294144,,3,1,0,0.0,aligned,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse229658_metformin_776uM_48h,Pericyte/SMC I,,,3,0,0,0.3333333333333333,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse229658_metformin_776uM_48h,Pericyte/SMC II,,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse229658_metformin_776uM_48h,Satellite cell,,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse229658_metformin_776uM_48h,Schwann cell,0.04548817127943039,,3,1,0,0.0,aligned,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse40789_cardarine_gw501516_10nM_96h,Adipocyte,0.45672474801540375,,3,2,0,0.3333333333333333,aligned,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse40789_cardarine_gw501516_10nM_96h,Endothelial cell (lymphatic),,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse40789_cardarine_gw501516_10nM_96h,Endothelial cell (vascular) I,,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse40789_cardarine_gw501516_10nM_96h,Endothelial cell (vascular) II,,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse40789_cardarine_gw501516_10nM_96h,Endothelial cell (vascular) III,,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse40789_cardarine_gw501516_10nM_96h,Fibroblast,0.42329731583595276,,3,1,0,0.3333333333333333,aligned,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse40789_cardarine_gw501516_10nM_96h,Immune (DC),,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse40789_cardarine_gw501516_10nM_96h,Immune (DC/macrophage),,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse40789_cardarine_gw501516_10nM_96h,Immune (NK cell),,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse40789_cardarine_gw501516_10nM_96h,Immune (T cell),,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse40789_cardarine_gw501516_10nM_96h,Immune (macrophage),0.13626424968242645,,3,1,0,0.3333333333333333,aligned,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse40789_cardarine_gw501516_10nM_96h,Immune (mast cell),,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse40789_cardarine_gw501516_10nM_96h,Immune (neutrophil),,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse40789_cardarine_gw501516_10nM_96h,Myocyte (NMJ-rich),,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse40789_cardarine_gw501516_10nM_96h,Myocyte (fast-twitch),-0.06946457177400589,,3,1,0,0.0,opposed,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse40789_cardarine_gw501516_10nM_96h,"Myocyte (fast-twitch, cytoplasmic)",,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse40789_cardarine_gw501516_10nM_96h,Myocyte (sk. muscle),,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse40789_cardarine_gw501516_10nM_96h,"Myocyte (slow-twitch, cytoplasmic)",0.14691884815692902,,3,1,0,0.3333333333333333,aligned,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse40789_cardarine_gw501516_10nM_96h,Pericyte/SMC I,,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse40789_cardarine_gw501516_10nM_96h,Pericyte/SMC II,,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse40789_cardarine_gw501516_10nM_96h,Satellite cell,,,3,0,0,0.0,unresolved,unresolved
+endurance_vs_ctrl_24h_top_16_exercise_genes,gse40789_cardarine_gw501516_10nM_96h,Schwann cell,,,3,0,0,0.0,unresolved,unresolved

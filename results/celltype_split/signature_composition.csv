@@ -1,0 +1,211 @@
+setting,contrast,category,n,fraction
+primary,endurance_vs_ctrl_4h,ambiguous,148,0.49333333333333335
+primary,endurance_vs_ctrl_4h,Other: Immune (DC),34,0.11333333333333333
+primary,endurance_vs_ctrl_4h,Other: Adipocyte,18,0.06
+primary,endurance_vs_ctrl_4h,Other: Endothelial cell (vascular) III,17,0.056666666666666664
+primary,endurance_vs_ctrl_4h,Other: Immune (NK cell),12,0.04
+primary,endurance_vs_ctrl_4h,Other: Immune (mast cell),11,0.03666666666666667
+primary,endurance_vs_ctrl_4h,Other: Schwann cell,10,0.03333333333333333
+primary,endurance_vs_ctrl_4h,Other: Immune (neutrophil),8,0.02666666666666667
+primary,endurance_vs_ctrl_4h,Other: Endothelial cell (vascular) I,6,0.02
+primary,endurance_vs_ctrl_4h,Other: Immune (T cell),6,0.02
+primary,endurance_vs_ctrl_4h,Other: Immune (DC/macrophage),6,0.02
+primary,endurance_vs_ctrl_4h,Other: Endothelial cell (vascular) II,5,0.016666666666666666
+primary,endurance_vs_ctrl_4h,Other: Fibroblast,5,0.016666666666666666
+primary,endurance_vs_ctrl_4h,Other: Endothelial cell (lymphatic),4,0.013333333333333334
+primary,endurance_vs_ctrl_4h,Other: Satellite cell,3,0.01
+primary,endurance_vs_ctrl_4h,Other: Pericyte/SMC II,3,0.01
+primary,endurance_vs_ctrl_4h,Other: Pericyte/SMC I,2,0.006666666666666667
+primary,endurance_vs_ctrl_4h,Other: Immune (macrophage),2,0.006666666666666667
+sensitivity,endurance_vs_ctrl_4h,ambiguous,153,0.51
+sensitivity,endurance_vs_ctrl_4h,Other: Immune (DC),32,0.10666666666666667
+sensitivity,endurance_vs_ctrl_4h,Other: Adipocyte,18,0.06
+sensitivity,endurance_vs_ctrl_4h,Other: Endothelial cell (vascular) III,15,0.05
+sensitivity,endurance_vs_ctrl_4h,Other: Immune (NK cell),12,0.04
+sensitivity,endurance_vs_ctrl_4h,Other: Immune (mast cell),10,0.03333333333333333
+sensitivity,endurance_vs_ctrl_4h,Other: Schwann cell,10,0.03333333333333333
+sensitivity,endurance_vs_ctrl_4h,Other: Immune (neutrophil),8,0.02666666666666667
+sensitivity,endurance_vs_ctrl_4h,Other: Endothelial cell (vascular) I,6,0.02
+sensitivity,endurance_vs_ctrl_4h,Other: Immune (T cell),6,0.02
+sensitivity,endurance_vs_ctrl_4h,Other: Immune (DC/macrophage),6,0.02
+sensitivity,endurance_vs_ctrl_4h,Other: Endothelial cell (vascular) II,5,0.016666666666666666
+sensitivity,endurance_vs_ctrl_4h,Other: Fibroblast,5,0.016666666666666666
+sensitivity,endurance_vs_ctrl_4h,Other: Endothelial cell (lymphatic),4,0.013333333333333334
+sensitivity,endurance_vs_ctrl_4h,Other: Satellite cell,3,0.01
+sensitivity,endurance_vs_ctrl_4h,Other: Pericyte/SMC II,3,0.01
+sensitivity,endurance_vs_ctrl_4h,Other: Pericyte/SMC I,2,0.006666666666666667
+sensitivity,endurance_vs_ctrl_4h,Other: Immune (macrophage),2,0.006666666666666667
+primary,resistance_vs_ctrl_4h,ambiguous,135,0.45
+primary,resistance_vs_ctrl_4h,Other: Immune (DC),35,0.11666666666666667
+primary,resistance_vs_ctrl_4h,Other: Adipocyte,22,0.07333333333333333
+primary,resistance_vs_ctrl_4h,Other: Immune (mast cell),14,0.04666666666666667
+primary,resistance_vs_ctrl_4h,Other: Immune (NK cell),14,0.04666666666666667
+primary,resistance_vs_ctrl_4h,Other: Endothelial cell (vascular) III,13,0.043333333333333335
+primary,resistance_vs_ctrl_4h,Other: Schwann cell,12,0.04
+primary,resistance_vs_ctrl_4h,Other: Immune (T cell),9,0.03
+primary,resistance_vs_ctrl_4h,Other: Pericyte/SMC I,9,0.03
+primary,resistance_vs_ctrl_4h,Other: Immune (neutrophil),8,0.02666666666666667
+primary,resistance_vs_ctrl_4h,Other: Pericyte/SMC II,6,0.02
+primary,resistance_vs_ctrl_4h,Other: Endothelial cell (vascular) I,5,0.016666666666666666
+primary,resistance_vs_ctrl_4h,Other: Endothelial cell (lymphatic),4,0.013333333333333334
+primary,resistance_vs_ctrl_4h,Other: Endothelial cell (vascular) II,4,0.013333333333333334
+primary,resistance_vs_ctrl_4h,Other: Immune (DC/macrophage),4,0.013333333333333334
+primary,resistance_vs_ctrl_4h,Other: Fibroblast,4,0.013333333333333334
+primary,resistance_vs_ctrl_4h,Other: Satellite cell,1,0.0033333333333333335
+primary,resistance_vs_ctrl_4h,myonucleus-specific,1,0.0033333333333333335
+sensitivity,resistance_vs_ctrl_4h,ambiguous,143,0.4766666666666667
+sensitivity,resistance_vs_ctrl_4h,Other: Immune (DC),32,0.10666666666666667
+sensitivity,resistance_vs_ctrl_4h,Other: Adipocyte,22,0.07333333333333333
+sensitivity,resistance_vs_ctrl_4h,Other: Immune (NK cell),14,0.04666666666666667
+sensitivity,resistance_vs_ctrl_4h,Other: Immune (mast cell),13,0.043333333333333335
+sensitivity,resistance_vs_ctrl_4h,Other: Schwann cell,12,0.04
+sensitivity,resistance_vs_ctrl_4h,Other: Endothelial cell (vascular) III,12,0.04
+sensitivity,resistance_vs_ctrl_4h,Other: Immune (T cell),9,0.03
+sensitivity,resistance_vs_ctrl_4h,Other: Immune (neutrophil),8,0.02666666666666667
+sensitivity,resistance_vs_ctrl_4h,Other: Pericyte/SMC I,7,0.023333333333333334
+sensitivity,resistance_vs_ctrl_4h,Other: Pericyte/SMC II,6,0.02
+sensitivity,resistance_vs_ctrl_4h,Other: Endothelial cell (vascular) I,5,0.016666666666666666
+sensitivity,resistance_vs_ctrl_4h,Other: Endothelial cell (lymphatic),4,0.013333333333333334
+sensitivity,resistance_vs_ctrl_4h,Other: Endothelial cell (vascular) II,4,0.013333333333333334
+sensitivity,resistance_vs_ctrl_4h,Other: Immune (DC/macrophage),4,0.013333333333333334
+sensitivity,resistance_vs_ctrl_4h,Other: Fibroblast,4,0.013333333333333334
+sensitivity,resistance_vs_ctrl_4h,Other: Satellite cell,1,0.0033333333333333335
+primary,endurance_vs_ctrl_24h,ambiguous,169,0.5633333333333334
+primary,endurance_vs_ctrl_24h,Other: Immune (DC),32,0.10666666666666667
+primary,endurance_vs_ctrl_24h,Other: Adipocyte,24,0.08
+primary,endurance_vs_ctrl_24h,Other: Immune (mast cell),16,0.05333333333333334
+primary,endurance_vs_ctrl_24h,Other: Pericyte/SMC I,8,0.02666666666666667
+primary,endurance_vs_ctrl_24h,Other: Schwann cell,8,0.02666666666666667
+primary,endurance_vs_ctrl_24h,Other: Endothelial cell (vascular) III,7,0.023333333333333334
+primary,endurance_vs_ctrl_24h,Other: Pericyte/SMC II,5,0.016666666666666666
+primary,endurance_vs_ctrl_24h,Other: Immune (T cell),5,0.016666666666666666
+primary,endurance_vs_ctrl_24h,Other: Immune (NK cell),5,0.016666666666666666
+primary,endurance_vs_ctrl_24h,Other: Fibroblast,4,0.013333333333333334
+primary,endurance_vs_ctrl_24h,Other: Immune (neutrophil),4,0.013333333333333334
+primary,endurance_vs_ctrl_24h,Other: Endothelial cell (vascular) I,3,0.01
+primary,endurance_vs_ctrl_24h,Other: Immune (macrophage),3,0.01
+primary,endurance_vs_ctrl_24h,Other: Endothelial cell (lymphatic),3,0.01
+primary,endurance_vs_ctrl_24h,Other: Satellite cell,2,0.006666666666666667
+primary,endurance_vs_ctrl_24h,myonucleus-specific,1,0.0033333333333333335
+primary,endurance_vs_ctrl_24h,Other: Endothelial cell (vascular) II,1,0.0033333333333333335
+sensitivity,endurance_vs_ctrl_24h,ambiguous,175,0.5833333333333334
+sensitivity,endurance_vs_ctrl_24h,Other: Immune (DC),30,0.1
+sensitivity,endurance_vs_ctrl_24h,Other: Adipocyte,23,0.07666666666666666
+sensitivity,endurance_vs_ctrl_24h,Other: Immune (mast cell),16,0.05333333333333334
+sensitivity,endurance_vs_ctrl_24h,Other: Pericyte/SMC I,8,0.02666666666666667
+sensitivity,endurance_vs_ctrl_24h,Other: Schwann cell,8,0.02666666666666667
+sensitivity,endurance_vs_ctrl_24h,Other: Endothelial cell (vascular) III,7,0.023333333333333334
+sensitivity,endurance_vs_ctrl_24h,Other: Pericyte/SMC II,5,0.016666666666666666
+sensitivity,endurance_vs_ctrl_24h,Other: Immune (T cell),5,0.016666666666666666
+sensitivity,endurance_vs_ctrl_24h,Other: Fibroblast,4,0.013333333333333334
+sensitivity,endurance_vs_ctrl_24h,Other: Immune (NK cell),4,0.013333333333333334
+sensitivity,endurance_vs_ctrl_24h,Other: Immune (neutrophil),4,0.013333333333333334
+sensitivity,endurance_vs_ctrl_24h,Other: Endothelial cell (vascular) I,3,0.01
+sensitivity,endurance_vs_ctrl_24h,Other: Endothelial cell (lymphatic),3,0.01
+sensitivity,endurance_vs_ctrl_24h,Other: Immune (macrophage),2,0.006666666666666667
+sensitivity,endurance_vs_ctrl_24h,Other: Satellite cell,2,0.006666666666666667
+sensitivity,endurance_vs_ctrl_24h,Other: Endothelial cell (vascular) II,1,0.0033333333333333335
+primary,resistance_vs_ctrl_24h,ambiguous,145,0.48333333333333334
+primary,resistance_vs_ctrl_24h,Other: Immune (DC),27,0.09
+primary,resistance_vs_ctrl_24h,Other: Immune (mast cell),21,0.07
+primary,resistance_vs_ctrl_24h,Other: Adipocyte,16,0.05333333333333334
+primary,resistance_vs_ctrl_24h,Other: Endothelial cell (vascular) III,12,0.04
+primary,resistance_vs_ctrl_24h,Other: Immune (NK cell),12,0.04
+primary,resistance_vs_ctrl_24h,Other: Schwann cell,10,0.03333333333333333
+primary,resistance_vs_ctrl_24h,Other: Pericyte/SMC I,10,0.03333333333333333
+primary,resistance_vs_ctrl_24h,Other: Fibroblast,6,0.02
+primary,resistance_vs_ctrl_24h,Other: Satellite cell,6,0.02
+primary,resistance_vs_ctrl_24h,Other: Endothelial cell (lymphatic),6,0.02
+primary,resistance_vs_ctrl_24h,Other: Immune (DC/macrophage),5,0.016666666666666666
+primary,resistance_vs_ctrl_24h,Other: Pericyte/SMC II,5,0.016666666666666666
+primary,resistance_vs_ctrl_24h,Other: Endothelial cell (vascular) I,5,0.016666666666666666
+primary,resistance_vs_ctrl_24h,Other: Immune (T cell),4,0.013333333333333334
+primary,resistance_vs_ctrl_24h,Other: Immune (macrophage),4,0.013333333333333334
+primary,resistance_vs_ctrl_24h,Other: Endothelial cell (vascular) II,3,0.01
+primary,resistance_vs_ctrl_24h,Other: Immune (neutrophil),3,0.01
+sensitivity,resistance_vs_ctrl_24h,ambiguous,152,0.5066666666666667
+sensitivity,resistance_vs_ctrl_24h,Other: Immune (DC),26,0.08666666666666667
+sensitivity,resistance_vs_ctrl_24h,Other: Immune (mast cell),19,0.06333333333333334
+sensitivity,resistance_vs_ctrl_24h,Other: Adipocyte,16,0.05333333333333334
+sensitivity,resistance_vs_ctrl_24h,Other: Immune (NK cell),12,0.04
+sensitivity,resistance_vs_ctrl_24h,Other: Endothelial cell (vascular) III,11,0.03666666666666667
+sensitivity,resistance_vs_ctrl_24h,Other: Schwann cell,10,0.03333333333333333
+sensitivity,resistance_vs_ctrl_24h,Other: Pericyte/SMC I,9,0.03
+sensitivity,resistance_vs_ctrl_24h,Other: Satellite cell,6,0.02
+sensitivity,resistance_vs_ctrl_24h,Other: Fibroblast,6,0.02
+sensitivity,resistance_vs_ctrl_24h,Other: Endothelial cell (lymphatic),6,0.02
+sensitivity,resistance_vs_ctrl_24h,Other: Endothelial cell (vascular) I,5,0.016666666666666666
+sensitivity,resistance_vs_ctrl_24h,Other: Immune (DC/macrophage),5,0.016666666666666666
+sensitivity,resistance_vs_ctrl_24h,Other: Pericyte/SMC II,4,0.013333333333333334
+sensitivity,resistance_vs_ctrl_24h,Other: Immune (T cell),4,0.013333333333333334
+sensitivity,resistance_vs_ctrl_24h,Other: Endothelial cell (vascular) II,3,0.01
+sensitivity,resistance_vs_ctrl_24h,Other: Immune (macrophage),3,0.01
+sensitivity,resistance_vs_ctrl_24h,Other: Immune (neutrophil),3,0.01
+primary,endurance_vs_ctrl_early,ambiguous,181,0.6033333333333334
+primary,endurance_vs_ctrl_early,Other: Endothelial cell (vascular) III,18,0.06
+primary,endurance_vs_ctrl_early,Other: Adipocyte,16,0.05333333333333334
+primary,endurance_vs_ctrl_early,Other: Endothelial cell (vascular) II,13,0.043333333333333335
+primary,endurance_vs_ctrl_early,Other: Immune (DC),13,0.043333333333333335
+primary,endurance_vs_ctrl_early,Other: Pericyte/SMC II,11,0.03666666666666667
+primary,endurance_vs_ctrl_early,Other: Immune (NK cell),11,0.03666666666666667
+primary,endurance_vs_ctrl_early,Other: Schwann cell,6,0.02
+primary,endurance_vs_ctrl_early,Other: Pericyte/SMC I,6,0.02
+primary,endurance_vs_ctrl_early,Other: Immune (mast cell),5,0.016666666666666666
+primary,endurance_vs_ctrl_early,Other: Endothelial cell (vascular) I,5,0.016666666666666666
+primary,endurance_vs_ctrl_early,Other: Immune (neutrophil),4,0.013333333333333334
+primary,endurance_vs_ctrl_early,Other: Endothelial cell (lymphatic),4,0.013333333333333334
+primary,endurance_vs_ctrl_early,Other: Fibroblast,3,0.01
+primary,endurance_vs_ctrl_early,Other: Immune (T cell),2,0.006666666666666667
+primary,endurance_vs_ctrl_early,Other: Immune (macrophage),1,0.0033333333333333335
+primary,endurance_vs_ctrl_early,Other: Immune (DC/macrophage),1,0.0033333333333333335
+sensitivity,endurance_vs_ctrl_early,ambiguous,182,0.6066666666666667
+sensitivity,endurance_vs_ctrl_early,Other: Endothelial cell (vascular) III,18,0.06
+sensitivity,endurance_vs_ctrl_early,Other: Adipocyte,15,0.05
+sensitivity,endurance_vs_ctrl_early,Other: Endothelial cell (vascular) II,13,0.043333333333333335
+sensitivity,endurance_vs_ctrl_early,Other: Immune (DC),13,0.043333333333333335
+sensitivity,endurance_vs_ctrl_early,Other: Pericyte/SMC II,11,0.03666666666666667
+sensitivity,endurance_vs_ctrl_early,Other: Immune (NK cell),11,0.03666666666666667
+sensitivity,endurance_vs_ctrl_early,Other: Schwann cell,6,0.02
+sensitivity,endurance_vs_ctrl_early,Other: Pericyte/SMC I,6,0.02
+sensitivity,endurance_vs_ctrl_early,Other: Immune (mast cell),5,0.016666666666666666
+sensitivity,endurance_vs_ctrl_early,Other: Endothelial cell (vascular) I,5,0.016666666666666666
+sensitivity,endurance_vs_ctrl_early,Other: Immune (neutrophil),4,0.013333333333333334
+sensitivity,endurance_vs_ctrl_early,Other: Endothelial cell (lymphatic),4,0.013333333333333334
+sensitivity,endurance_vs_ctrl_early,Other: Fibroblast,3,0.01
+sensitivity,endurance_vs_ctrl_early,Other: Immune (T cell),2,0.006666666666666667
+sensitivity,endurance_vs_ctrl_early,Other: Immune (macrophage),1,0.0033333333333333335
+sensitivity,endurance_vs_ctrl_early,Other: Immune (DC/macrophage),1,0.0033333333333333335
+primary,resistance_vs_ctrl_early,ambiguous,178,0.5933333333333334
+primary,resistance_vs_ctrl_early,Other: Endothelial cell (vascular) III,26,0.08666666666666667
+primary,resistance_vs_ctrl_early,Other: Adipocyte,13,0.043333333333333335
+primary,resistance_vs_ctrl_early,Other: Pericyte/SMC II,12,0.04
+primary,resistance_vs_ctrl_early,Other: Endothelial cell (vascular) II,12,0.04
+primary,resistance_vs_ctrl_early,Other: Immune (NK cell),11,0.03666666666666667
+primary,resistance_vs_ctrl_early,Other: Immune (mast cell),9,0.03
+primary,resistance_vs_ctrl_early,Other: Pericyte/SMC I,9,0.03
+primary,resistance_vs_ctrl_early,Other: Immune (DC),6,0.02
+primary,resistance_vs_ctrl_early,Other: Immune (neutrophil),5,0.016666666666666666
+primary,resistance_vs_ctrl_early,Other: Endothelial cell (lymphatic),4,0.013333333333333334
+primary,resistance_vs_ctrl_early,Other: Schwann cell,4,0.013333333333333334
+primary,resistance_vs_ctrl_early,Other: Fibroblast,4,0.013333333333333334
+primary,resistance_vs_ctrl_early,Other: Endothelial cell (vascular) I,3,0.01
+primary,resistance_vs_ctrl_early,Other: Immune (macrophage),2,0.006666666666666667
+primary,resistance_vs_ctrl_early,Other: Immune (T cell),1,0.0033333333333333335
+primary,resistance_vs_ctrl_early,Other: Satellite cell,1,0.0033333333333333335
+sensitivity,resistance_vs_ctrl_early,ambiguous,180,0.6
+sensitivity,resistance_vs_ctrl_early,Other: Endothelial cell (vascular) III,26,0.08666666666666667
+sensitivity,resistance_vs_ctrl_early,Other: Adipocyte,13,0.043333333333333335
+sensitivity,resistance_vs_ctrl_early,Other: Pericyte/SMC II,12,0.04
+sensitivity,resistance_vs_ctrl_early,Other: Endothelial cell (vascular) II,12,0.04
+sensitivity,resistance_vs_ctrl_early,Other: Immune (NK cell),11,0.03666666666666667
+sensitivity,resistance_vs_ctrl_early,Other: Pericyte/SMC I,9,0.03
+sensitivity,resistance_vs_ctrl_early,Other: Immune (mast cell),8,0.02666666666666667
+sensitivity,resistance_vs_ctrl_early,Other: Immune (DC),6,0.02
+sensitivity,resistance_vs_ctrl_early,Other: Immune (neutrophil),5,0.016666666666666666
+sensitivity,resistance_vs_ctrl_early,Other: Endothelial cell (lymphatic),4,0.013333333333333334
+sensitivity,resistance_vs_ctrl_early,Other: Schwann cell,4,0.013333333333333334
+sensitivity,resistance_vs_ctrl_early,Other: Endothelial cell (vascular) I,3,0.01
+sensitivity,resistance_vs_ctrl_early,Other: Fibroblast,3,0.01
+sensitivity,resistance_vs_ctrl_early,Other: Immune (macrophage),2,0.006666666666666667
+sensitivity,resistance_vs_ctrl_early,Other: Immune (T cell),1,0.0033333333333333335
+sensitivity,resistance_vs_ctrl_early,Other: Satellite cell,1,0.0033333333333333335

@@ -1,0 +1,29 @@
+{
+  "model_id": "vandijklab/C2S-Scale-Gemma-2-2B",
+  "model_revision": "5ddf28b8f1c81b7ab7a9be192924da82b6c5d512",
+  "model_cache": "/Users/schwepa9/.cache/huggingface/hub",
+  "device": "mps",
+  "dtype": "torch.float16",
+  "reference_path": "/Users/schwepa9/Desktop/Bioascent-hackathon/data/gtex_sn_skeletalmuscle.h5ad",
+  "expression_layer": null,
+  "gene_symbol_column": "Approved symbol",
+  "cell_type_column": "Granular cell type",
+  "cell_types": null,
+  "cells_per_type": 3,
+  "seed": 42,
+  "top_genes": 300,
+  "min_genes": 200,
+  "signature_score_mode": "rank_proxy",
+  "proxy_max_log2fc": 0.5,
+  "embedding_method": "mean final-layer hidden states over gene tokens, excluding special tokens; raw ranked sentence; no generation",
+  "baseline_method": "expression-weighted Pearson correlation of shifts on jointly represented expressed signature genes (at least 3)",
+  "aggregation": "mean paired-nucleus similarities within cell type; report valid counts",
+  "packages": {
+    "torch": "2.15.0",
+    "transformers": "4.57.6",
+    "scanpy": "1.11.5",
+    "numpy": "2.4.6",
+    "pandas": "2.3.3"
+  },
+  "interpretation": "Exploratory rank-based comparison; not validated perturbation prediction or causal evidence of exercise blunting."
+}

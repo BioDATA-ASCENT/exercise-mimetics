@@ -1,0 +1,25 @@
+sample,donor,group,stimulated
+GSM1077239,individual id: individual 01,sample group: in-vitro electric pulse stimulation (EPS) for 24hr,True
+GSM1077240,individual id: individual 02,sample group: in-vitro electric pulse stimulation (EPS) for 24hr,True
+GSM1077241,individual id: individual 03,sample group: in-vitro electric pulse stimulation (EPS) for 24hr,True
+GSM1077242,individual id: individual 04,sample group: in-vitro electric pulse stimulation (EPS) for 24hr,True
+GSM1077243,individual id: individual 05,sample group: in-vitro electric pulse stimulation (EPS) for 24hr,True
+GSM1077244,individual id: individual 06,sample group: in-vitro electric pulse stimulation (EPS) for 24hr,True
+GSM1077245,individual id: individual 07,sample group: in-vitro electric pulse stimulation (EPS) for 24hr,True
+GSM1077246,individual id: individual 08,sample group: in-vitro electric pulse stimulation (EPS) for 24hr,True
+GSM1077247,individual id: individual 09,sample group: in-vitro electric pulse stimulation (EPS) for 24hr,True
+GSM1077248,individual id: individual 10,sample group: in-vitro electric pulse stimulation (EPS) for 24hr,True
+GSM1077249,individual id: individual 11,sample group: in-vitro electric pulse stimulation (EPS) for 24hr,True
+GSM1077250,individual id: individual 12,sample group: in-vitro electric pulse stimulation (EPS) for 24hr,True
+GSM1077251,individual id: individual 01,sample group: control,False
+GSM1077252,individual id: individual 02,sample group: control,False
+GSM1077253,individual id: individual 03,sample group: control,False
+GSM1077254,individual id: individual 04,sample group: control,False
+GSM1077255,individual id: individual 05,sample group: control,False
+GSM1077256,individual id: individual 06,sample group: control,False
+GSM1077257,individual id: individual 07,sample group: control,False
+GSM1077258,individual id: individual 08,sample group: control,False
+GSM1077259,individual id: individual 09,sample group: control,False
+GSM1077260,individual id: individual 10,sample group: control,False
+GSM1077261,individual id: individual 11,sample group: control,False
+GSM1077262,individual id: individual 12,sample group: control,False
