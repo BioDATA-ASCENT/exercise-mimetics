@@ -1,0 +1,433 @@
+<title>Exercise × LINCS</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,650&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a single reading column (~68ch) with figures allowed to run wider; lab-notebook tone, data first. */
+:root {
+  --bg: #fbfbf9; --surface: #ffffff; --ink: #17191c; --ink-2: #4c5058; --ink-3: #7b8089;
+  --rule: #e2e3df; --tint: #f1f3f0;
+  --accent: #1f5f8b;
+  --up: #d1453f; --down: #2a78d6; --ns: #c8cac5; --sel: #17191c; --warn-bg: #fff4e0; --warn-ink: #7a4b00;
+  --ok: #0f7b3a; --bad: #b3261e;
+  --f-display: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --f-body: "Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #141618; --surface: #1b1e21; --ink: #ecedeb; --ink-2: #b8bcc2; --ink-3: #8b9097;
+  --rule: #2e3236; --tint: #202427; --accent: #6fb0e0;
+  --up: #e66767; --down: #4a95ec; --ns: #474b50; --sel: #ffffff; --warn-bg: #3a2c12; --warn-ink: #f3c66b;
+  --ok: #4cc27a; --bad: #f08079; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #141618; --surface: #1b1e21; --ink: #ecedeb; --ink-2: #b8bcc2; --ink-3: #8b9097;
+  --rule: #2e3236; --tint: #202427; --accent: #6fb0e0;
+  --up: #e66767; --down: #4a95ec; --ns: #474b50; --sel: #ffffff; --warn-bg: #3a2c12; --warn-ink: #f3c66b;
+  --ok: #4cc27a; --bad: #f08079; color-scheme: dark }
+
+body { background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 15px; line-height: 1.6; }
+.wrap { max-width: 1040px; margin: 0 auto; padding-block: 40px 80px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+h1, h2, h3 { font-family: var(--f-display); font-weight: 650; text-wrap: balance; line-height: 1.2; margin: 0; }
+h1 { font-size: clamp(28px, 4.4vw, 40px); letter-spacing: -0.01em; }
+h2 { font-size: 24px; margin-top: 8px; }
+h3 { font-size: 18px; font-weight: 500; }
+p { margin: 0; max-width: 68ch; }
+.prose { display: grid; gap: 12px; }
+.eyebrow { font-family: var(--f-mono); font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); }
+.lede { font-size: 17px; color: var(--ink-2); max-width: 64ch; }
+section { display: grid; gap: 18px; padding-top: 44px; margin-top: 44px; border-top: 1px solid var(--rule); }
+header { display: grid; gap: 14px; }
+code, .mono { font-family: var(--f-mono); font-size: 0.88em; }
+code { background: var(--tint); padding: 1px 5px; border-radius: 4px; }
+a { color: var(--accent); }
+.num { font-variant-numeric: tabular-nums; }
+
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 8px; overflow: hidden; }
+.stat { background: var(--surface); padding: 14px 16px; display: grid; gap: 2px; }
+.stat b { font-family: var(--f-display); font-size: 26px; font-weight: 650; font-variant-numeric: tabular-nums; }
+.stat span { font-size: 12.5px; color: var(--ink-2); }
+
+.contrast { font-family: var(--f-mono); font-size: 12.5px; background: var(--tint); padding: 12px 14px; border-radius: 6px; overflow-x: auto; color: var(--ink-2); line-height: 1.7; }
+.contrast em { color: var(--ink); font-style: normal; font-weight: 500; }
+
+.fig { background: var(--surface); border: 1px solid var(--rule); border-radius: 8px; padding: 16px; display: grid; gap: 12px; min-width: 0; }
+.fig-head { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: baseline; justify-content: space-between; }
+.fig-head h3 { font-size: 16px; }
+.cap { font-size: 13px; color: var(--ink-2); max-width: 80ch; }
+.grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 16px; }
+.canvas-box { position: relative; width: 100%; aspect-ratio: 16 / 10; max-width: 100%; }
+.canvas-box.short { aspect-ratio: 16 / 9; }
+.canvas-box canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+.tip { position: absolute; pointer-events: none; background: var(--surface); border: 1px solid var(--rule); color: var(--ink); border-radius: 6px; padding: 7px 9px; font-size: 12.5px; line-height: 1.45; box-shadow: 0 4px 14px rgb(0 0 0 / 0.12); white-space: nowrap; z-index: 2; }
+.tip b { font-family: var(--f-mono); }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 12.5px; color: var(--ink-2); }
+.legend i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; vertical-align: -1px; }
+.controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.seg { display: inline-flex; border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; flex-wrap: wrap; }
+.seg button { font: inherit; font-size: 12.5px; background: var(--surface); color: var(--ink-2); border: 0; padding: 6px 10px; cursor: pointer; }
+.seg button + button { border-left: 1px solid var(--rule); }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+.seg button:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+input[type="search"] { font: inherit; font-size: 13px; padding: 6px 10px; border: 1px solid var(--rule); border-radius: 6px; background: var(--surface); color: var(--ink); width: 180px; }
+.found { font-size: 12.5px; color: var(--ink-2); }
+
+.tbl-wrap { overflow-x: auto; border: 1px solid var(--rule); border-radius: 8px; background: var(--surface); }
+table { border-collapse: collapse; width: 100%; font-size: 13px; font-variant-numeric: tabular-nums; }
+th, td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { font-weight: 600; font-size: 11.5px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-3); background: var(--tint); position: sticky; top: 0; }
+tr:last-child td { border-bottom: 0; }
+td.r, th.r { text-align: right; }
+td.drug { font-family: var(--f-mono); font-size: 12.5px; white-space: nowrap; }
+td.moa { color: var(--ink-2); min-width: 160px; }
+td.dim { color: var(--ink-3); }
+.pill { display: inline-block; font-size: 11px; padding: 1px 7px; border-radius: 999px; border: 1px solid currentColor; white-space: nowrap; }
+.pill.mim { color: var(--up); } .pill.rev { color: var(--down); } .pill.zero { color: var(--ink-3); }
+.bar { display: inline-block; height: 8px; border-radius: 0 4px 4px 0; vertical-align: middle; margin-right: 6px; }
+
+.callout { background: var(--warn-bg); color: var(--warn-ink); border-radius: 8px; padding: 14px 16px; display: grid; gap: 6px; }
+.callout p { max-width: none; }
+.steps { display: grid; gap: 10px; counter-reset: s; padding: 0; margin: 0; list-style: none; }
+.steps li { display: grid; grid-template-columns: 28px 1fr; gap: 10px; }
+.steps li::before { counter-increment: s; content: counter(s); font-family: var(--f-mono); font-size: 12px; color: var(--accent); border: 1px solid var(--accent); border-radius: 50%; width: 22px; height: 22px; display: grid; place-items: center; margin-top: 1px; }
+.cols2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 16px; }
+.read { display: grid; gap: 14px; }
+.read > div { display: grid; gap: 4px; padding-left: 14px; border-left: 2px solid var(--rule); }
+.read h3 { font-size: 16px; font-weight: 650; }
+.check { display: grid; grid-template-columns: auto 1fr; gap: 6px 12px; align-items: start; }
+.badge { font-family: var(--f-mono); font-size: 11px; padding: 2px 7px; border-radius: 4px; font-weight: 500; white-space: nowrap; }
+.badge.pass { color: var(--ok); border: 1px solid var(--ok); }
+.badge.cav { color: var(--warn-ink); background: var(--warn-bg); }
+.badge.fail { color: var(--bad); border: 1px solid var(--bad); }
+ul.files { margin: 0; padding-left: 18px; display: grid; gap: 4px; font-size: 13.5px; }
+.tbl-wrap.tall { max-height: 720px; overflow: auto; }
+.chips { display: flex; flex-wrap: wrap; gap: 4px; }
+.chip { font-family: var(--f-mono); font-size: 11.5px; padding: 1px 6px; border-radius: 4px; background: var(--tint); white-space: nowrap; }
+.chip.up { color: var(--up); } .chip.down { color: var(--down); }
+.chip.deg { box-shadow: inset 0 0 0 1px currentColor; font-weight: 500; }
+footer { margin-top: 48px; font-size: 12.5px; color: var(--ink-3); }
+@media (max-width: 560px) { .stat b { font-size: 22px; } th, td { padding: 6px 8px; } }
+</style>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">Exercise mimetics · step 2 · LINCS L1000 signature search</div>
+  <h1>Endurance exercise at 24 h, matched against 136,460 drug signatures</h1>
+  <p class="lede">This report covers the MoTrPAC differential-expression result, the genes picked as the exercise signature, and the drugs whose L1000 profiles look most like it or most opposite to it. The last sections explain how to read the scores and how the pipeline was checked.</p>
+</header>
+
+<section id="deg">
+  <div class="eyebrow">Part 1 · the input</div>
+  <h2>What the DEG table contains</h2>
+  <div class="prose">
+    <p>The input is one MoTrPAC skeletal-muscle contrast from the human pre-suspension cohort, fit with a mixed model (random effect per participant, adjusted for batch, BMI, age, site, RNA quality and sex). It is a <b>difference-in-changes</b>:</p>
+  </div>
+  <div class="contrast">(<em>Endurance 24 h post</em> − Endurance pre) − (<em>Control 24 h post</em> − Control pre)</div>
+  <div class="prose">
+    <p>A positive <code>logFC</code> means the gene went up more from baseline in the endurance group than in the controls over the same 24 hours. Subtracting the controls removes changes caused by the visit, the time of day and repeated biopsies. <code>logFC</code> is on a log2 scale: 1 is about 2-fold, 0.5 about 1.4-fold.</p>
+  </div>
+  <div class="stats" id="degStats"></div>
+
+  <div class="fig">
+    <div class="fig-head">
+      <h3>Volcano plot</h3>
+      <div class="controls">
+        <div class="seg" role="group" aria-label="Highlight">
+          <button type="button" id="hl-s" aria-pressed="true">Signature genes</button>
+          <button type="button" id="hl-inL" aria-pressed="false">Measured by LINCS</button>
+        </div>
+        <input type="search" id="geneSearch" placeholder="Find a gene, e.g. PDK4" aria-label="Find a gene">
+        <span class="found" id="found"></span>
+      </div>
+    </div>
+    <div class="canvas-box" id="volBox"><canvas id="vol"></canvas><div class="tip" id="volTip" hidden></div></div>
+    <div class="legend" id="volLegend"></div>
+    <p class="cap" id="volCap"></p>
+  </div>
+
+  <div class="grid2">
+    <div class="fig">
+      <div class="fig-head"><h3>Effect size vs expression level (MA plot)</h3></div>
+      <div class="canvas-box short" id="maBox"><canvas id="ma"></canvas><div class="tip" id="maTip" hidden></div></div>
+      <p class="cap">Each dot is a gene: x is its average expression (log2 CPM), y its logFC. Low-expressed genes on the left reach larger fold changes with less evidence. Many of the biggest positive logFCs here are low-count genes, often lncRNAs that L1000 does not measure.</p>
+    </div>
+    <div class="fig">
+      <div class="fig-head"><h3>Raw p-value distribution</h3></div>
+      <div id="phist"></div>
+      <p class="cap">A well-behaved test gives a spike near 0 (true changes) over a flat floor (unchanged genes). Here the spike is clear and the floor flattens out from about p = 0.3. The gentle slope in between suggests many genes with small real changes that do not reach FDR &lt; 0.05. Bars in the accent colour are p &lt; 0.05.</p>
+    </div>
+  </div>
+
+  <div class="fig">
+    <div class="fig-head"><h3>Strongest changes (FDR &lt; 0.05)</h3><span class="found">top 15 each way by logFC</span></div>
+    <div class="grid2" id="topGenes"></div>
+    <p class="cap">"LINCS" marks genes that L1000 measures or reliably infers (landmark + best inferred, 10,174 genes). Genes without the mark cannot contribute to the drug search.</p>
+  </div>
+</section>
+
+<section id="signature">
+  <div class="eyebrow">Part 2 · the query</div>
+  <h2>The exercise signature</h2>
+  <div class="prose">
+    <p>Genes with FDR &lt; 0.05 are ranked by logFC, and the top 100 up and top 100 down are kept, <b>choosing only among genes LINCS measures or infers</b>. That gives <span id="nInL"></span> eligible genes out of <span id="nSig"></span> significant ones. The up genes have logFC ≥ <span id="cutUp"></span> and the down genes ≤ <span id="cutDn"></span>.</p>
+    <p>Without that restriction, about half of the top-ranked genes would be lost in the search, because L1000 does not measure them. They are mostly lncRNAs and pseudogenes, but they include a few muscle-metabolism genes (PLIN5, CPT1B, MYLK2, PRKAG3). <span id="nRen"></span> genes are matched by Ensembl ID because LINCS still uses older names (for example SEPTIN7 → SEPT7, MACIR → C5orf30).</p>
+  </div>
+</section>
+
+<section id="method">
+  <div class="eyebrow">Part 3 · the method</div>
+  <h2>How a drug gets its score</h2>
+  <ol class="steps">
+    <li><p><b>One L1000 signature</b> is one drug at one dose, time and cell line: a z-score for each of 10,174 genes. One exemplar per drug × cell line × dose × time is used, 136,460 in total.</p></li>
+    <li><p><b>Enrichment.</b> Genes in the drug signature are ranked from most up to most down. A weighted Kolmogorov–Smirnov score asks whether the exercise up genes sit near the top (<code>es_up</code>) and the down genes near the bottom (<code>es_down</code>). Each score runs from −1 to +1.</p></li>
+    <li><p><b>WTCS</b> = (es_up − es_down) / 2, but <b>only if the two have opposite signs</b>. Otherwise it is 0: the drug moves both gene sets the same way, so it gives no directional answer.</p></li>
+    <li><p><b>NCS</b> rescales WTCS within each cell line (positives divided by the mean positive score, negatives by the mean negative score). An NCS of 1 is an average-strength connection in that cell line.</p></li>
+    <li><p><b>Per drug</b>: take the strongest dose/time in each cell line, then the median NCS across cell lines. Drugs need at least 2 cell lines. <code>n_zero</code> counts cell lines scoring 0, and <code>consistency</code> is the share of the non-zero cell lines that agree on direction.</p></li>
+  </ol>
+  <div class="callout">
+    <p><b><span id="zeroPct"></span> of all drug signatures score exactly 0</b>, because their up and down sets moved the same way. A drug whose cell lines are mostly 0 gets a median of 0 and the call <b>no signal</b>, which applies to <span id="nNo"></span> of <span id="nDr"></span> drugs. Read it as "no consistent signal", not as "no effect".</p>
+  </div>
+</section>
+
+<section id="results">
+  <div class="eyebrow">Part 4 · the answer</div>
+  <h2>Which drugs look like endurance exercise, and which oppose it</h2>
+  <div class="stats" id="runStats"></div>
+
+  <div class="fig">
+    <div class="fig-head"><h3>Distribution of drug scores</h3><span class="found">median NCS per drug, drugs in ≥ 2 cell lines</span></div>
+    <div id="nhist"></div>
+    <p class="cap">The tall bar at 0 is the drugs with no consistent signal. Mimickers are the right tail, reversers the left tail. The tables below show the top 50 each way among drugs seen in at least 3 cell lines with at least 75% of non-zero cell lines agreeing on direction.</p>
+  </div>
+
+  <div class="grid2">
+    <div class="fig">
+      <div class="fig-head"><h3>Top 50 mimickers</h3><span class="pill mim">profile resembles exercise</span></div>
+      <div class="tbl-wrap tall" id="tMim"></div>
+    </div>
+    <div class="fig">
+      <div class="fig-head"><h3>Top 50 reversers</h3><span class="pill rev">profile opposes exercise</span></div>
+      <div class="tbl-wrap tall" id="tRev"></div>
+    </div>
+  </div>
+
+  <div class="fig" id="tgtFig">
+    <div class="fig-head"><h3>Target genes of the top hits, and how they changed with exercise</h3><span class="found" id="tgtNote"></span></div>
+    <div class="tbl-wrap" id="tTgt"></div>
+    <p class="cap">Targets come from the LINCS compound annotation; most top hits are unannotated research compounds and have none. The MoTrPAC columns show how the target gene itself changed in muscle 24 h after endurance exercise. "Not tested" means the gene is not in the MoTrPAC table, usually because it is too lowly expressed in muscle. The clearest link: <b>MTOR goes up with exercise and is the target of six top reversers</b> (all mTOR inhibitors), and <b>IGF1R goes down with exercise</b> and is the target of the reverser NVP-ADW742.</p>
+  </div>
+
+  <div class="fig">
+    <div class="fig-head"><h3>Mechanisms among the top 50</h3></div>
+    <div id="moaBox"></div>
+    <p class="cap">Counted from <code>compoundinfo_beta.txt</code>. Most top hits are unannotated BRD compounds, so these counts are small.</p>
+  </div>
+
+  <div class="fig">
+    <div class="fig-head"><h3>Controls and step-3 validation drugs</h3><span class="found">any number of cell lines</span></div>
+    <div class="tbl-wrap" id="tRef"></div>
+    <p class="cap">Rank is out of all drugs in ≥ 2 cell lines (1 = strongest mimicker), left blank for scores of 0, since about two-thirds of drugs tie there. "Zero" is cell lines scoring 0 out of those tested.</p>
+  </div>
+
+</section>
+
+<section id="reading">
+  <div class="eyebrow">Part 5 · interpretation</div>
+  <h2>How to read these results</h2>
+  <div class="read">
+    <div>
+      <h3>The reverser side is the most coherent result</h3>
+      <p>Half of the annotated top 50 reversers are <b>mTOR or PI3K inhibitors</b> (PKI-179, GDC-0980, OSI-027, PF-04691502, KU-0063794, SB-2343, taselisib), plus the IGF-1R inhibitor NVP-ADW742. Several were tested in 13–25 cell lines. Their targets fit the exercise data: MTOR itself goes up with exercise, and IGF1R goes down (see the target table). Exercise activates the IGF-1/PI3K/mTOR growth pathway in recovering muscle, so drugs that block it producing the mirror-image profile makes sense. They are good candidate blunters to follow up.</p>
+    </div>
+    <div>
+      <h3>Treat the top mimickers with care</h3>
+      <p>43 of the top 50 mimickers are unannotated BRD compounds. The annotated ones are broad anti-proliferative drugs: <b>DHODH inhibitors</b> (brequinar, SC-12267, which block pyrimidine synthesis), <b>CDK inhibitors</b> (AZD-5438, BMS-265246), and the transcription blockers daunorubicin and triptolide. Compounds like these score highly against many queries because they shut down growth and short-lived transcripts. Read them as "the 24 h response shares a growth-arrest component" rather than as exercise mimetics.</p>
+    </div>
+    <div>
+      <h3>Statins: lipophilic ones lean reverser</h3>
+      <p>Mevastatin, lovastatin, fluvastatin and cerivastatin have negative scores, while the hydrophilic pravastatin and rosuvastatin sit at 0. That fits the lipophilic-vs-hydrophilic question tested in step 3 (GSE107998). The pattern is weak: simvastatin and atorvastatin are also lipophilic and sit at 0. The myotube data is the real test.</p>
+    </div>
+    <div>
+      <h3>Most controls sit at 0</h3>
+      <p>Dexamethasone is a clear mimicker. Forskolin and the β-agonists score 0, although forskolin mimics exercise in about half its cell lines. At 24 h most acute cAMP/CREB response genes are gone, so a weak match is expected. Scores near 0 are fragile: swapping 4 signature genes once moved forskolin between +0.82 and 0. Metformin and statins at 0 means L1000, in mostly cancer cell lines, does not show them opposing this response. That is not evidence against blunting in muscle.</p>
+    </div>
+    <div>
+      <h3>What a score can and cannot tell you</h3>
+      <p>An NCS around ±1 is a typical connection; above about ±1.5 is strong. A high score in many cell lines, with few zeros and high consistency, is more trustworthy than the same score in 2 or 3 cell lines. LINCS profiles come mostly from cancer cell lines at 6–24 h, at doses unrelated to physiology. A call is a hypothesis to test in muscle, not a finding.</p>
+    </div>
+  </div>
+</section>
+
+<section id="verify">
+  <div class="eyebrow">Part 6 · checking the work</div>
+  <h2>How the pipeline was checked</h2>
+  <div class="check">
+    <span class="badge pass">PASS</span><p><b>Scoring matches the reference method.</b> An independent re-implementation of the original full running-sum scoring (cmapR-style) on 3,311 real signatures gave the same es_up, es_down and WTCS to within 2 × 10<sup>−4</sup> (one rank step from tied z-scores), with no sign disagreements.</p>
+    <span class="badge pass">PASS</span><p><b>Reading the 35 GB file.</b> Matrix orientation and ID mapping were confirmed two ways: two read methods agree exactly, and strongly changed genes per signature track LINCS's own counts (r = 0.89 vs 0.10 shuffled).</p>
+    <span class="badge pass">PASS</span><p><b>Gene selection, normalisation and per-drug table.</b> The top-100 lists were recomputed independently (no ties at the cutoff), and the NCS and per-drug table were rebuilt from the per-signature scores. Both match exactly.</p>
+    <span class="badge pass">PASS</span><p><b>Counts.</b> 136,460 exemplar drug signatures and 10,174 genes (978 measured + 9,196 inferred).</p>
+    <span class="badge cav">NOTE</span><p><b>Fixed during review:</b> median-0 drugs were labelled "reverser" (now "no signal"); consistency counted zeros (now non-zero cell lines only); "isoproterenol" is "isoprenaline" in LINCS; renamed genes are now matched by Ensembl ID.</p>
+  </div>
+</section>
+
+<section id="files">
+  <div class="eyebrow">Files</div>
+  <h2>Where everything is</h2>
+  <ul class="files">
+    <li><code>scripts/step2_linc_sigSearch/</code> holds the pipeline (<code>run_step2.sh</code> runs all three steps; see its README)</li>
+    <li><code>signatures/exercise/endurance_24h_up.txt</code> and <code>_down.txt</code> are the query; <code>endurance_24h.csv</code> lists the same genes with logFC; <code>endurance_24h_full_ranked.csv</code> has all genes ranked by t</li>
+    <li><code>results/lincs/drugs.csv</code> has one row per drug; <code>reference_drugs.csv</code> covers the controls and step-3 drugs; <code>hits.csv.gz</code> has one row per LINCS signature</li>
+    <li><code>results/lincs/hit_targets.csv</code> lists, for the top 50 mimickers and reversers, each drug's target genes and its 100 most increased and 100 most decreased LINCS genes, with each gene's LINCS z-score and MoTrPAC logFC, t and FDR</li>
+  </ul>
+</section>
+<footer>Data: MoTrPAC human pre-suspension DEA (skeletal muscle, endurance vs control, 24 h); LINCS 2020 Level 5 trt_cp (CMap beta). BioDATA ASCENT code-a-thon, November 2026.</footer>
+</div>
+
+<script>
+const D = /*DATA*/null;
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const fmt = (x, d = 2) => x == null ? "" : (x > 0 ? "+" : "") + x.toFixed(d);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const $ = id => document.getElementById(id);
+const c = D.counts, R = D.run, g = D.deg, N = g.sym.length;
+const stats = rows => rows.map(([b, s]) => `<div class="stat"><b>${b}</b><span>${s}</span></div>`).join("");
+
+/* ---------- numbers in text ---------- */
+$("degStats").innerHTML = stats([[c.n.toLocaleString(), "genes tested"], [c.sig.toLocaleString(), "FDR < 0.05"],
+  [c.up.toLocaleString(), "up with endurance"], [c.down.toLocaleString(), "down with endurance"],
+  [c.sigInL.toLocaleString(), "significant and measured by LINCS"]]);
+$("nInL").textContent = c.sigInL.toLocaleString(); $("nSig").textContent = c.sig.toLocaleString();
+$("cutUp").textContent = c.cut_up.toFixed(2); $("cutDn").textContent = c.cut_down.toFixed(2); $("nRen").textContent = c.renamed;
+$("zeroPct").textContent = Math.round(R.frac_zero * 100) + "%";
+$("nNo").textContent = R.n_nosignal.toLocaleString(); $("nDr").textContent = R.n_drugs.toLocaleString();
+$("runStats").innerHTML = stats([[R.n_sig.toLocaleString(), "drug signatures scored"], [R.n_drugs.toLocaleString(), "drugs in ≥ 2 cell lines"],
+  [R.n_strong.toLocaleString(), "in ≥ 3 cell lines, ≥ 75% agree"], [Math.round(R.frac_zero * 100) + "%", "signatures scoring 0"]]);
+
+/* ---------- scatter plots (canvas) ---------- */
+let hl = "s", query = "";
+function scatter(id, boxId, tipId, xs, ys, xlab, ylab, o) {
+  const cv = $(id), box = $(boxId), tip = $(tipId), ctx = cv.getContext("2d"), pad = { l: 48, r: 12, t: 10, b: 38 };
+  let px = new Float32Array(N), py = new Float32Array(N);
+  function draw() {
+    const dpr = window.devicePixelRatio || 1, W = box.clientWidth, H = box.clientHeight;
+    cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.clearRect(0, 0, W, H);
+    const sx = v => pad.l + (v - o.xmin) / (o.xmax - o.xmin) * (W - pad.l - pad.r);
+    const sy = v => H - pad.b - (v - o.ymin) / (o.ymax - o.ymin) * (H - pad.t - pad.b);
+    ctx.strokeStyle = css("--rule"); ctx.fillStyle = css("--ink-3"); ctx.lineWidth = 1; ctx.font = "11px " + css("--f-mono");
+    ctx.textAlign = "center";
+    for (const t of o.xt) { const x = sx(t); ctx.beginPath(); ctx.moveTo(x, pad.t); ctx.lineTo(x, H - pad.b); ctx.stroke(); ctx.fillText(t, x, H - pad.b + 15); }
+    ctx.textAlign = "right";
+    for (const t of o.yt) { const y = sy(t); ctx.beginPath(); ctx.moveTo(pad.l, y); ctx.lineTo(W - pad.r, y); ctx.stroke(); ctx.fillText(t, pad.l - 6, y + 4); }
+    ctx.fillStyle = css("--ink-2"); ctx.font = "12px " + css("--f-body"); ctx.textAlign = "center";
+    ctx.fillText(xlab, pad.l + (W - pad.l - pad.r) / 2, H - 6);
+    ctx.save(); ctx.translate(13, pad.t + (H - pad.t - pad.b) / 2); ctx.rotate(-Math.PI / 2); ctx.fillText(ylab, 0, 0); ctx.restore();
+    if (o.hline != null) { ctx.setLineDash([4, 4]); ctx.strokeStyle = css("--ink-3"); const y = sy(o.hline); ctx.beginPath(); ctx.moveTo(pad.l, y); ctx.lineTo(W - pad.r, y); ctx.stroke(); ctx.setLineDash([]); }
+    const cUp = css("--up"), cDn = css("--down"), bg = css("--surface"), layers = [[], [], []];
+    for (let i = 0; i < N; i++) {
+      px[i] = sx(Math.max(o.xmin, Math.min(o.xmax, xs[i]))); py[i] = sy(Math.max(o.ymin, Math.min(o.ymax, ys[i])));
+      layers[!g.sig[i] ? 0 : (hl === "s" ? g.s[i] : g.inL[i]) ? 2 : 1].push(i);
+    }
+    ctx.globalAlpha = 0.55; ctx.fillStyle = css("--ns");
+    for (const i of layers[0]) { ctx.beginPath(); ctx.arc(px[i], py[i], 1.8, 0, 6.283); ctx.fill(); }
+    ctx.globalAlpha = 0.35;
+    for (const i of layers[1]) { ctx.fillStyle = g.lfc[i] > 0 ? cUp : cDn; ctx.beginPath(); ctx.arc(px[i], py[i], 2.4, 0, 6.283); ctx.fill(); }
+    ctx.globalAlpha = 1; ctx.lineWidth = 1.5;
+    for (const i of layers[2]) { ctx.fillStyle = g.lfc[i] > 0 ? cUp : cDn; ctx.strokeStyle = bg; ctx.beginPath(); ctx.arc(px[i], py[i], 3.6, 0, 6.283); ctx.fill(); ctx.stroke(); }
+    if (query) {
+      ctx.font = "600 12px " + css("--f-mono"); ctx.textAlign = "left";
+      for (let i = 0; i < N; i++) if (g.sym[i].toUpperCase() === query.toUpperCase()) {
+        ctx.strokeStyle = css("--sel"); ctx.lineWidth = 2; ctx.beginPath(); ctx.arc(px[i], py[i], 7, 0, 6.283); ctx.stroke();
+        ctx.fillStyle = css("--ink"); const w = ctx.measureText(g.sym[i]).width;
+        ctx.fillText(g.sym[i], px[i] + 10 > W - w - 10 ? px[i] - 10 - w : px[i] + 10, py[i] - 8);
+      }
+    }
+  }
+  cv.addEventListener("mousemove", e => {
+    const r = cv.getBoundingClientRect(), mx = e.clientX - r.left, my = e.clientY - r.top;
+    let i = -1, bd = 64;
+    for (let k = 0; k < N; k++) { const d = (px[k] - mx) ** 2 + (py[k] - my) ** 2; if (d < bd) { bd = d; i = k; } }
+    if (i < 0) { tip.hidden = true; return; }
+    const fdr = Math.pow(10, -g.nlp[i]);
+    tip.innerHTML = `<b>${esc(g.sym[i])}</b><br>logFC ${fmt(g.lfc[i])} · FDR ${fdr < 1e-3 ? fdr.toExponential(1) : fdr.toFixed(3)}<br>avg expr ${g.ave[i].toFixed(1)} · ${g.inL[i] ? "measured by LINCS" : "not in LINCS"}${g.s[i] ? "<br>in the signature" : ""}`;
+    tip.hidden = false;
+    tip.style.left = Math.min(Math.max(0, px[i] + 12), r.width - tip.offsetWidth) + "px";
+    tip.style.top = Math.max(0, py[i] - tip.offsetHeight - 10) + "px";
+  });
+  cv.addEventListener("mouseleave", () => tip.hidden = true);
+  return draw;
+}
+const drawVol = scatter("vol", "volBox", "volTip", g.lfc, g.nlp, "log2 fold change (endurance − control, change from baseline)", "−log10 FDR",
+  { xmin: -2, xmax: 3.5, ymin: 0, ymax: 14, xt: [-2, -1, 0, 1, 2, 3], yt: [0, 2, 4, 6, 8, 10, 12, 14], hline: -Math.log10(0.05) });
+const drawMA = scatter("ma", "maBox", "maTip", g.ave, g.lfc, "average expression (log2 CPM)", "log2 fold change",
+  { xmin: -6, xmax: 16, ymin: -2, ymax: 3.5, xt: [-4, 0, 4, 8, 12, 16], yt: [-2, -1, 0, 1, 2, 3] });
+const caps = { s: "Larger, ringed dots are the 200 signature genes: the top 100 up and 100 down by logFC among significant genes LINCS measures.",
+  inL: "Larger dots are all significant genes that L1000 measures or infers. Only these can contribute to a drug search." };
+function redraw() { drawVol(); drawMA(); }
+function setHl(k) {
+  hl = k; for (const b of ["s", "inL"]) $("hl-" + b).setAttribute("aria-pressed", b === k);
+  $("volCap").textContent = caps[k] + " Dashed line: FDR = 0.05. Hover any dot for details."; redraw();
+}
+for (const k of ["s", "inL"]) $("hl-" + k).addEventListener("click", () => setHl(k));
+$("volLegend").innerHTML = `<span><i style="background:var(--up)"></i>up, FDR &lt; 0.05</span><span><i style="background:var(--down)"></i>down, FDR &lt; 0.05</span><span><i style="background:var(--ns)"></i>not significant</span>`;
+$("geneSearch").addEventListener("input", e => {
+  query = e.target.value.trim();
+  const i = g.sym.findIndex(s => s.toUpperCase() === query.toUpperCase());
+  $("found").textContent = !query ? "" : i < 0 ? "not in the table" : `logFC ${fmt(g.lfc[i])}, FDR ${Math.pow(10, -g.nlp[i]).toExponential(1)}${g.inL[i] ? "" : ", not in LINCS"}`;
+  redraw();
+});
+
+/* ---------- histograms (SVG) ---------- */
+function bars(el, counts, edges, o) {
+  const W = 520, H = 200, p = { l: 46, r: 10, t: 10, b: 34 }, n = counts.length, bw = (W - p.l - p.r) / n;
+  const yv = v => H - p.b - v / o.ymax * (H - p.t - p.b);
+  let s = `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="${esc(o.label)}" style="display:block">`;
+  for (const t of o.yt) s += `<line x1="${p.l}" x2="${W - p.r}" y1="${yv(t)}" y2="${yv(t)}" stroke="var(--rule)"/><text x="${p.l - 6}" y="${yv(t) + 4}" text-anchor="end" font-size="11" font-family="var(--f-mono)" fill="var(--ink-3)">${t.toLocaleString()}</text>`;
+  counts.forEach((v, i) => {
+    const x = p.l + i * bw + 1, h = Math.max(0, H - p.b - yv(Math.min(v, o.ymax)));
+    s += `<rect x="${x}" y="${H - p.b - h}" width="${bw - 2}" height="${h}" rx="2" fill="${o.color(edges[i], edges[i + 1])}"><title>${edges[i].toFixed(2)} to ${edges[i + 1].toFixed(2)}: ${v.toLocaleString()}</title></rect>`;
+    if (v > o.ymax) s += `<text x="${x + bw / 2}" y="${p.t + 10}" text-anchor="middle" font-size="10" font-family="var(--f-mono)" fill="var(--ink-2)">${v.toLocaleString()}</text>`;
+  });
+  for (const t of o.xt) s += `<text x="${p.l + (t - edges[0]) / (edges[n] - edges[0]) * (W - p.l - p.r)}" y="${H - p.b + 15}" text-anchor="middle" font-size="11" font-family="var(--f-mono)" fill="var(--ink-3)">${t}</text>`;
+  el.innerHTML = s + `<text x="${p.l + (W - p.l - p.r) / 2}" y="${H - 4}" text-anchor="middle" font-size="12" fill="var(--ink-2)">${esc(o.xlab)}</text></svg>`;
+}
+function drawBars() {
+  const pmax = Math.max(...D.phist), pY = Math.ceil(pmax / 1000) * 1000;
+  bars($("phist"), D.phist, Array.from({ length: 21 }, (_, i) => i * 0.05), { label: "p-value histogram", ymax: pY,
+    yt: Array.from({ length: pY / 1000 + 1 }, (_, i) => i * 1000), xt: [0, 0.25, 0.5, 0.75, 1], xlab: "raw p-value",
+    color: lo => lo < 0.04 ? "var(--accent)" : "var(--ns)" });
+  const hc = R.hist, zi = hc.indexOf(Math.max(...hc)), ym = Math.ceil(Math.max(...hc.filter((_, i) => i !== zi)) / 100) * 100;
+  bars($("nhist"), hc, R.hist_br, { label: "median NCS histogram", ymax: ym, yt: [0, ym / 2, ym], xt: [-2, -1, 0, 1, 2],
+    xlab: "median NCS across cell lines (the bar at 0 is cut off; its count is printed)",
+    color: (lo, hi) => (lo < 0 && hi > 0) ? "var(--ns)" : lo >= 0 ? "var(--up)" : "var(--down)" });
+}
+let rt; window.addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(redraw, 120); });
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => { redraw(); drawBars(); });
+new MutationObserver(() => { redraw(); drawBars(); }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+
+/* ---------- tables ---------- */
+const moaCell = m => m ? esc(m) : '<span class="dim">not annotated</span>';
+const pill = v => v > 0 ? '<span class="pill mim">mimicker</span>' : v < 0 ? '<span class="pill rev">reverser</span>' : '<span class="pill zero">no signal</span>';
+function geneTable(dir) {
+  const rows = D.topgenes.filter(r => r.dir === dir), max = Math.max(...rows.map(r => Math.abs(r.logFC)));
+  return `<div class="tbl-wrap"><table><thead><tr><th>${dir === "up" ? "Up" : "Down"}</th><th class="r">logFC</th><th class="r">FDR</th><th>LINCS</th></tr></thead><tbody>` +
+    rows.map(r => `<tr><td class="drug">${esc(r.gene)}</td><td class="r"><span class="bar" style="width:${Math.abs(r.logFC) / max * 48}px;background:var(--${dir})"></span>${fmt(r.logFC)}</td><td class="r">${r.fdr.toExponential(1)}</td><td>${r.inLINCS ? "yes" : '<span class="dim">no</span>'}</td></tr>`).join("") + "</tbody></table></div>";
+}
+$("topGenes").innerHTML = geneTable("up") + geneTable("down");
+const chip = (x, cls) => `<span class="chip ${cls}" title="${esc(x.t || "")}">${esc(x.label)}</span>`;
+const TG = D.targets || [];
+const tgtCls = x => x.m === "up with exercise" ? "deg up" : x.m === "down with exercise" ? "deg down" : "";
+const tgtTip = x => x.lfc == null ? "not tested in MoTrPAC" : `exercise logFC ${fmt(x.lfc)}, FDR ${x.fdr.toExponential(1)} (${x.m})`;
+const tgtChips = d => TG.filter(x => x.drug === d).map(x => chip({ label: x.g, t: tgtTip(x) }, tgtCls(x))).join("");
+const drugTable = rows => `<table><thead><tr><th>Drug</th><th class="r">NCS</th><th class="r">Cells</th><th class="r">Zero</th><th class="r">Agree</th><th>Targets</th><th>Mechanism</th></tr></thead><tbody>` +
+  rows.map(r => `<tr><td class="drug">${esc(r.drug)}</td><td class="r">${fmt(r.ncs)}</td><td class="r">${r.n_cell}</td><td class="r dim">${r.n_zero}</td><td class="r">${Math.round(r.cons * 100)}%</td><td><div class="chips">${tgtChips(r.drug)}</div></td><td class="moa">${moaCell(r.moa)}</td></tr>`).join("") + "</tbody></table>";
+$("tMim").innerHTML = drugTable(R.mim); $("tRev").innerHTML = drugTable(R.rev);
+/* ---------- target table ---------- */
+if (TG.length) {
+  const drugs = [...new Set(TG.map(x => x.drug))];
+  $("tgtNote").textContent = `${drugs.length} of ${R.mim.length + R.rev.length} top drugs have annotated targets`;
+  $("tTgt").innerHTML = `<table><thead><tr><th>Call</th><th class="r">Hit rank</th><th>Drug</th><th class="r">NCS</th><th>Mechanism</th><th>Target</th><th class="r">Exercise logFC</th><th class="r">FDR</th><th>In MoTrPAC</th></tr></thead><tbody>` +
+    TG.map(x => `<tr><td>${x.call === "mimicker" ? '<span class="pill mim">mimicker</span>' : '<span class="pill rev">reverser</span>'}</td><td class="r">${x.hit_rank}</td><td class="drug">${esc(x.drug)}</td><td class="r">${fmt(x.ncs)}</td><td class="moa">${moaCell(x.moa)}</td><td><span class="chip ${tgtCls(x)}">${esc(x.g)}</span></td><td class="r">${x.lfc == null ? '<span class="dim">–</span>' : fmt(x.lfc)}</td><td class="r">${x.fdr == null ? '<span class="dim">–</span>' : x.fdr.toExponential(1)}</td><td class="${x.m.startsWith("not") ? "dim" : ""}">${esc(x.m)}</td></tr>`).join("") + "</tbody></table>";
+} else $("tgtFig").hidden = true;
+
+setHl("s"); drawBars();
+</script>

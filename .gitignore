@@ -1,0 +1,4 @@
+# large inputs (LINCS GCTX, MoTrPAC tables, GEO downloads) stay out of git
+data/
+.Rhistory
+.RData
