@@ -1,0 +1,38 @@
+# Core analysis env: MoTrPAC signatures, LINCS queries, GEO validation, single-cell reference, plots.
+# Runs on a laptop (macOS/Linux), no GPU needed.
+#   mamba env create -f exercise-mimetics.yml   (or: conda env create -f ...)
+#   conda activate exmim
+name: exmim
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.11
+  # data wrangling + stats
+  - numpy
+  - pandas
+  - scipy
+  - statsmodels
+  - scikit-learn
+  - pyarrow
+  - openpyxl
+  - requests
+  - tqdm
+  # plotting + notebooks
+  - matplotlib
+  - seaborn
+  - plotly
+  - jupyterlab
+  - ipykernel
+  # single-cell reference (GTEx snRNA / HuBMAP h5ad)
+  - scanpy
+  - anndata
+  - h5py
+  - leidenalg
+  - pip
+  - pip:
+      - gseapy          # Enrichr libraries incl. LINCS_L1000_Chem_Pert_Consensus_Sigs, GSEA/prerank
+      - mygene          # Ensembl <-> symbol mapping
+      - GEOparse        # GEO series matrices for the myotube validation sets
+      - pydeseq2        # DE on GEO RNA-seq counts (metformin, statin myotubes)
+      - decoupler       # pathway/TF activity scoring of signatures

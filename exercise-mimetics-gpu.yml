@@ -1,0 +1,33 @@
+# Foundation-model env for the Cell2Sentence / Geneformer stretch goal.
+# Kept separate so torch/transformers can't break the core env.
+# Linux + NVIDIA GPU (AnVIL/CWIC/Colab): pip's torch wheel ships with CUDA 12.
+# macOS: works for CPU/MPS smoke tests with the 2B model, but slowly.
+#   mamba env create -f exercise-mimetics-gpu.yml
+#   conda activate exmim-gpu
+name: exmim-gpu
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  - matplotlib
+  - seaborn
+  - jupyterlab
+  - ipykernel
+  - scanpy
+  - anndata
+  - h5py
+  - pip
+  - pip:
+      - torch
+      - transformers
+      - accelerate
+      - datasets
+      - huggingface_hub
+      - bitsandbytes      # 8/4-bit loading if GPU memory is tight (Linux/CUDA only; delete on macOS)
+      - cell2sentence     # vandijklab C2S utilities; model: vandijklab/C2S-Scale-Gemma-2-2B
+      # Geneformer (optional; installs from Hugging Face, large repo):
+      # - git+https://huggingface.co/ctheodoris/Geneformer
