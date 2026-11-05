@@ -144,10 +144,10 @@ python test_lincs.py --up ... --down ... --cell-lines SKL ASC
 
 | Workstream | Who |
 |---|---|
-| Exercise signature | |
+| Exercise signature |Jenn Kerr|
 | LINCS scoring | |
 | In-vitro vs in-vivo check | |
-| Interpretation, figures, write-up | |
+| Interpretation, figures, write-up |Paul Schwerd-Kleine, Jenn Kerr |
 | Cell-type split + coordination | Paul Schwerd-Kleine |
 
 ## Acknowledgements
